@@ -1,0 +1,26 @@
+.react-outline *[data-oui-component] {
+  outline: 2px solid hotpink;
+}
+.react-outline *[data-ui-component] {
+  outline: 2px dotted mediumpurple;
+}
+
+/* Smaller widths for nested components */
+.react-outline *[data-oui-component] *[data-oui-component],
+.react-outline *[data-ui-component] *[data-ui-component] {
+  outline-width: 1px;
+}
+
+
+.react-border *[data-oui-component] {
+  border: 2px solid hotpink;
+}
+.react-border *[data-ui-component] {
+  border: 2px dotted mediumpurple;
+}
+
+/* Smaller widths for nested components */
+.react-border *[data-oui-component] *[data-oui-component],
+.react-border *[data-ui-component] *[data-ui-component] {
+  border-width: 1px;
+}
