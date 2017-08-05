@@ -1,4 +1,6 @@
-# Show React
+<img src="https://github.com/daverau-optimizely/show_react/blob/master/icon.png" />
 
-Add borders to any React component with the atrribute `data-ui-component`.
-Also use outlines instead, which don't affect the layout as much.
+# Show React Chrome Extension
+
+Add borders to any React component with the attribute `data-ui-component`.
+Toggle between borders vs outlines, which don't affect the layout as much.
