@@ -1,4 +1,4 @@
-<img src="https://github.com/daverau-optimizely/show_react/blob/master/icon.png" />
+<img src="https://github.com/daverau-optimizely/show_react/blob/master/icon.png" width="64" />
 
 # Show React Chrome Extension
 
