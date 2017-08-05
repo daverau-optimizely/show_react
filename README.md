@@ -5,5 +5,5 @@
 Add borders to any React component with the attribute `data-ui-component`.
 Toggle between borders vs outlines, which don't affect the layout as much.
 
-- *OUI components* have a hotpink solid border.
-- *App components* have a mediumpurple dotted border.
+- **OUI components** have a hotpink solid border.
+- **App components** have a mediumpurple dotted border.
