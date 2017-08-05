@@ -2,31 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Highlight React</title>
+  <title>Show React</title>
   <style>
-    /*.faux-icon {
-      text-indent: 9000px;
-      overflow: hidden;
+    .faux-icon.border:after {
+      width: 10px;
+      height: 10px;
       display: inline-block;
-      width: 12px;
-      height: 12px;
-    }
-    .faux-icon.border {
+      content: '';
+      margin-left: 8px;
       outline: 1px solid black;
       border: 2px solid hotpink;
     }
-    .faux-icon.outline {
+    .faux-icon.outline:after {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      content: '';
+      margin-left: 8px;
       outline: 2px solid hotpink;
       border: 1px solid black;
-    }*/
-
+    }
     .react-outline {
       border: 2px solid hotpink;
     }
     .react-border {
       border: 2px dotted mediumpurple;
     }
-
     .showreact-logo, .showreact-logo div {
       border: 2px dotted mediumpurple;
       margin: 8px;
@@ -36,16 +37,13 @@
     .showreact-logo div {
       border: 2px solid hotpink;
     }
-
     .hotpink {
       color: hotpink;
     }
   </style>
 </head>
 <body>
-
-  <div class="">
-
+  <div>
     <h3 class="flex flex--column flex-align--center flex-justify--center soft push--bottom soft--bottom border--bottom background--light">
         <div class="showreact-logo flush--left">
           <div>
@@ -55,16 +53,14 @@
         <span class="micro muted">v1.0</span>
       </p>
     </h3>
-
     <div class="soft--sides">
       <p class="button-group flex">
+        <button class="oui-button flex--1" id="off"><span class="faux-icon">Off</span></button>
         <button class="oui-button flex--1" id="outlines"><span class="faux-icon outline">Outlines</span></button>
         <button class="oui-button flex--1" id="borders"><span class="faux-icon border">Borders</span></button>
       </p>
     </div>
-
   </div>
-
   <script src="popup.js"></script>
   <script src="styles.js"></script>
 </body>
