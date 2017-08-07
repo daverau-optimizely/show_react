@@ -1,20 +1,20 @@
-getSetting();
+updateUI();
 
 // Buttons
 document.getElementById('off').onclick = function(e){
   setSave('off');
-  getSetting();
+  updateUI();
 }
 document.getElementById('borders').onclick = function(e){
   setSave('borders');
-  getSetting();
+  updateUI();
 }
 document.getElementById('outlines').onclick = function(e){
   setSave('outlines');
-  getSetting();
+  updateUI();
 }
 
-function getSetting() {
+function updateUI() {
   let setting = localStorage.getItem('show_react');
   updateButtons(setting);
   updateBadge(setting);
@@ -28,7 +28,7 @@ function getSetting() {
 function setSave(val) {
   localStorage.setItem('show_react',val);
   // chrome.storage.local.set({'setting': val}, function() {
-  //   getSetting();
+  //   updateUI();
   // });
 }
 
