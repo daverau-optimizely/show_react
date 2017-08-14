@@ -7,7 +7,7 @@ Toggle between borders vs outlines, which don't affect the layout as much.
 
 ## Install:
 1. [Download](https://github.com/daverau-optimizely/show_react/archive/master.zip) & unzip `show_react-master`
-2. Open <a href="chrome://extensions/">Chrome Extensions (`chrome://extensions/`)</a> and `Load unpacked extension` using the folder above
+2. Open <a href="chrome://extensions/">Chrome Extensions (`chrome://extensions/`)</a> and `Load unpacked extension` using the folder above (you may need to enable `Developer Mode` on this page first!)
 3. Visit [OUI](http://design.optimizely.com/docs/oui/latest/components/Button) React tabs or [app.optimizely.com](https://app.optimizely.com/)
 
 ## Demo:
