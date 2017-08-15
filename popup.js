@@ -15,21 +15,17 @@ document.getElementById('outlines').onclick = function(e){
 }
 
 function updateUI() {
-  let setting = localStorage.getItem('show_react') === null ? setSave('off') : localStorage.getItem('show_react');
+  let setting = localStorage.getItem('show_react');
+  if (setting !== 'off' || setting !== 'borders' || setting !== 'outlines') {
+    setSave('off');
+    setting = 'off';
+  }
   updateButtons(setting);
   updateBadge(setting);
   injectBodyClass(setting);
-  // chrome.storage.local.get({setting:'off'}, function(val) {
-  //   updateButtons(val.setting);
-  //   updateBadge(val.setting);
-  //   injectBodyClass(val.setting);
-  // });
 }
 function setSave(val) {
   localStorage.setItem('show_react',val);
-  // chrome.storage.local.set({'setting': val}, function() {
-  //   updateUI();
-  // });
 }
 
 // Add/remove target tab body class
@@ -56,26 +52,25 @@ function updateButtons(val) {
   document.getElementById('off').classList.remove('oui-button--highlight');
   document.getElementById('outlines').classList.remove('oui-button--highlight');
   document.getElementById('borders').classList.remove('oui-button--highlight');
-
   document.getElementById( val ).classList.add('oui-button--highlight');
 }
 
 // Toggle pink checkmark that works across tabs
 function updateBadge(val) {
-  if (typeof chrome.browserAction !== 'undefined') { // ihatejavascript
+  if (typeof chrome.browserAction !== 'undefined') {
     if ( val !== 'off' ) {
       chrome.browserAction.setBadgeText({
-        text: "✓"
+        text: '✓'
       });
       chrome.browserAction.setBadgeBackgroundColor({
-        color: "#FF69B4"
+        color: '#FF69B4'
       });
     } else {
       chrome.browserAction.setBadgeText({
-        text: ""
+        text: ''
       });
       chrome.browserAction.setBadgeBackgroundColor({
-        color: ""
+        color: ''
       });
     }
   }

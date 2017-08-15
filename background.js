@@ -1,11 +1,11 @@
 function setBodyclass() {
-  let val = localStorage.getItem('show_react');
-  if ( val == 'borders' ) {
+  let setting = localStorage.getItem('show_react') === null ? setSave('off') : localStorage.getItem('show_react');
+  if ( setting == 'borders' ) {
     document.body.classList.add("react-borders");
     chrome.tabs.executeScript({
       code: 'document.body.classList.add("react-borders"); document.body.classList.remove("react-outlines");'
     });
-  } else if ( val == 'outlines' ) {
+  } else if ( setting == 'outlines' ) {
     chrome.tabs.executeScript({
       code: 'document.body.classList.add("react-outlines"); document.body.classList.remove("react-borders");'
     });
