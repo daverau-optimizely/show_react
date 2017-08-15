@@ -15,10 +15,7 @@ document.getElementById('outlines').onclick = function(e){
 }
 
 function updateUI() {
-  let setting = localStorage.getItem('show_react');
-  if (!setting || setting == '') {
-    setting = 'off';
-  }
+  let setting = localStorage.getItem('show_react') === null ? localStorage.setItem('off') : localStorage.getItem('show_react');
   updateButtons(setting);
   updateBadge(setting);
   injectBodyClass(setting);
