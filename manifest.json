@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Show React",
+  "description": "Add borders/outlines to React elements inside of OUI & Optimizely.",
   "version": "1.0",
 
   "browser_action": {
